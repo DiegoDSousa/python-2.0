@@ -57,5 +57,6 @@ inicio=dados_organizados[0]
 while c!=nclasses:
     final=inicio+amplitude
     lista_classes.append("["+str(inicio)+","+str(final)+"[")
+    c+=1
 print("aa")
 print(lista_classes)
