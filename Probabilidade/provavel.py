@@ -37,7 +37,7 @@ print(amplitude)
 escrever=""
 
 print(nclasses)
-with open('Probabilidade/resultado.txt','w') as f:
+with open('resultado.txt','w') as f:
     f.write("Dados: "+ str(dados)+"\n")
     f.write("Dados organizados: "+str(dados_organizados)+"\n")
     f.write("Numero Elementos: "+str(rol)+"\n")
