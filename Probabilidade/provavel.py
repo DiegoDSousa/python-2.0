@@ -51,12 +51,24 @@ with open('Probabilidade/resultado.txt','w') as f:
 classe=[]
 final=[]
 c=0
+
 posicao=0
 lista_classes=[]
+lista_frequencia=[]
 inicio=dados_organizados[0]
+final=inicio+amplitude
 while c!=nclasses:
-    final=inicio+amplitude
+    a=0
+    frequencia=0
     lista_classes.append("["+str(inicio)+","+str(final)+"[")
+    while a!=rol:
+        if (dados_organizados[a] <= inicio) or (dados_organizados[a]>final):
+            frequencia+=1
+        a+=1
+    lista_frequencia.append(str(frequencia))
+    inicio=final
+    final=final+amplitude
     c+=1
 print("aa")
 print(lista_classes)
+print(lista_frequencia)
