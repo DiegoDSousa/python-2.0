@@ -4,12 +4,8 @@ dados=[32.3,62.2,10.3,22.0,13.1,9.9,11.9,20.0,36.4,23.5,18.0,22.6,20.3,38.3,19.6
 29.7,25.4,23.8,15.7,17.0,39.2,22.7,29.9,18.3,33.0]
 rol=len(dados)
 dados_organizados=[]
-print("dados brutos: ",dados)
 dados_organizados=dados
-dados_organizados.sort()
 
-print("dados organizados: ",dados_organizados)
-print(len(dados))
 c=0
 l_sup=0
 l_inf=0
@@ -33,15 +29,15 @@ range=l_sup-l_inf
 amplitude=range/nclasses
 amplitude=math.ceil(range/nclasses)
 pontoMedio=(l_sup+l_inf)/2
-print("limite superior: ",l_sup," limite inferior: ",l_inf)
-print("range: ",range)
-print("amplitude: ",amplitude)
-escrever=""
 
-print("numero de classes: ",nclasses)
+escrever=""
+print("dados brutos: ",dados)
+
+
+
 with open('Probabilidade/resultado.txt','w') as f:
     f.write("Dados: "+ str(dados)+"\n")
-    
+    dados_organizados.sort()
     f.write("Dados organizados: "+str(dados_organizados)+"\n")
     f.write("Numero Elementos: "+str(rol)+"\n")
     f.write("Range: "+str(range)+"\n")
@@ -50,6 +46,13 @@ with open('Probabilidade/resultado.txt','w') as f:
     f.write("Numero de Classes: "+str(nclasses)+"\n")
     f.write("Amplitude: "+str(amplitude)+"\n")
     f.close
+
+print("dados organizados: ",dados_organizados)
+
+
+
+
+
 
 classe=[]
 final=[]
@@ -75,5 +78,17 @@ while c!=nclasses:
     final=final+amplitude
 
     c+=1
+
+
+
+
+
+#prints no terminal
+
+print("limite superior: ",l_sup," limite inferior: ",l_inf)
+print("range: ",range)
+print("numero de classes: ",nclasses)
+print("amplitude: ",amplitude)
+
 print("lista classes: ",lista_classes)
 print("frequencias: ",lista_frequencia)
