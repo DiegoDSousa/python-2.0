@@ -1,7 +1,7 @@
 import math
 from urllib.request import DataHandler
-dados=[32.3,62.2,10.3,22.0,13.1,9.9,11.9,20.0,36.4,23.5,18.0,22.6,20.3,38.3,19.6,27.2,28.9,18.4,27.3,21.7,23.7,13.9,36.3,32.9,
-29.7,25.4,23.8,15.7,17.0,39.2,22.7,29.9,18.3,33.0]
+dados=[230,235,200,175,170,290,181,245,150,190,120,145,220,225,215,195,200,230,
+240,200,230,165,265,210,250,210,215,190,270,250]
 rol=len(dados)
 dados_organizados=[]
 dados_organizados=dados
@@ -35,7 +35,7 @@ print("dados brutos: ",dados)
 
 
 
-with open('Probabilidade/resultado.txt','w') as f:
+with open('resultado.txt','w') as f:
     f.write("Dados: "+ str(dados)+"\n")
     dados_organizados.sort()
     f.write("Dados organizados: "+str(dados_organizados)+"\n")
